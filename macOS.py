@@ -15,7 +15,9 @@ class HomeMacOS(QWidget):
     
     def initUI(self):
         self.button = QPushButton("Clean!")
+        self.button.setProperty("class","cleanButton")
         self.applyButton = QPushButton("Apply!")
+        self.applyButton.setProperty("class","applyButton")
         
         self.radioButton1 = QCheckBox("Images")
         self.radioButton2 = QCheckBox("Apps")
@@ -44,6 +46,17 @@ class HomeMacOS(QWidget):
             QCheckBox{
                 background-color: #ffffff;
                 color: #000000;
+            }
+            QPushButton{
+                padding:5px 5px;
+                width: fit-content;
+                margin: 5px;  
+            }
+            .applyButton{
+                background-color:#4eb34b;
+            }
+            .cleanButton{
+                background-color:#edd57e;               
             }
                            """)
 
